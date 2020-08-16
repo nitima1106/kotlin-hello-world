@@ -1,6 +1,17 @@
 fun main(){
-    var hip = Hippo()
-    hip.eat()
+    //นี่คือ Hippo ของฉัน
+    var myhippo = Hippo()
+    myhippo.eat()
+    myhippo.roam()
+    myhippo.makeNoise()
+    myhippo.sleep()
+
+    //สร้างแมวของเรา
+    var mycat = Cat()
+    mycat.eat()
+    mycat.roam()
+    mycat.makeNoise()
+    mycat.sleep()
 }
 
 open class Animal {
@@ -28,4 +39,29 @@ open class Animal {
 
 class Hippo : Animal() {
     //สร้างคลาส Hippo แต่ยังไม่ได้ทำอะไร
+    override val image = "hippo.jpg"
+    override val food = "grass"
+    override val habitat = "water"
+
+    override fun makeNoise() {
+        println("Grunt! Geunt!")
+}
+
+    override fun eat() {
+        print("The Hippo is eating $food")
+        }
+}
+
+class Cat : Animal() {
+    override val image = "cat.jpg"
+    override val food = "หนู"
+    override val habitat = "บ้าน"
+
+    override fun makeNoise() {
+        println("Meow! Meow!")
+}
+
+    override fun eat() {
+        print("The cat is eating $food")
+    }
 }
