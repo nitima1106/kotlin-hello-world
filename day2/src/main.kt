@@ -1,10 +1,26 @@
 fun main(){
-    var x = 1
 
-    while (x < 3) {
-        print (if (x == 1)"Yab" else "Dab")
-        print ("ba")
-        x = x + 1
+}
+
+open class Animal {
+    open val image = ""
+    open val food = ""
+    open val habitat =""
+    val hunger = 10
+
+    open fun makeNoise () {
+        println("The animal is making a noise")
     }
-    if (x==3) println ("Do")
+
+    open fun eat () {
+        println("The Animal is eating")
+    }
+
+    open fun roam () {
+        println("The Animal is roaming")
+    }
+
+    fun sleep () {
+        println("The Animal is sleeping")
+    }
 }
